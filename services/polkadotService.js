@@ -8,7 +8,7 @@ export default new class PolkadotService {
 
     // async connect(nodeUrl = 'wss://rpc.polkadot.io') 
 
-    async connect(nodeUrl = 'ws://127.0.0.1:42605') {
+    async connect(nodeUrl = 'wss://rpc.polkadot.io') {
         if (this.connected && this.api) return this.api;
 
         const provider = new WsProvider(nodeUrl);
